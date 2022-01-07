@@ -3,13 +3,16 @@ import numpy as np
 import time
 import imutils
 from find_plate import detection
-# from ocr import ocr
 from ocr import ocr
 from os import path
+
+# import retrieve from sqlite folder
 from sqlite import retrieve
 
+# import the remove function from remove.py
 import remove
 
+# Remove the Crop4.jpg file if it exists
 remove.remove()
 
 from flask import Flask, render_template, Response
@@ -17,6 +20,8 @@ import cv2
 from sqlite.retrieve import create_connection
 
 app = Flask(__name__)
+
+# Specify the file to be used for the inference
 camera = cv2.VideoCapture("test.mp4")
 
 
@@ -42,11 +47,9 @@ def gen_frames():
             fps = frame_id / elapsed_time
             cv2.putText(frame, "FPS: " + str(round(fps, 2)), (10, 50), font, 4,
                         (0, 0, 0), 3)
-            if (path.exists("ocr.txt")):
-                pass
-            else:
-                if (path.exists("crop4.jpg")):
-                    r = ocr.image_to_text()
+
+            if (path.exists("crop4.jpg")):
+                ocr.image_to_text()
 
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
