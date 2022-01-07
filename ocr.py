@@ -20,7 +20,7 @@ class ocr:
                 filter(lambda ch: ch not in " ?.!/;:-", result))
             ocr_text = ''.join([str(elem) for elem in filtered_result])
             date, time = find_date.date_time()
-            # Removing the Crop4.jpg file and ocr.txt file
+            # Removing the Crop4.jpg file
             remove.remove()
             # Inserting the OCR text into the database
             if (Regex.validate(ocr_text)):  # Check if the OCR text is valid
