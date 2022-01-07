@@ -6,10 +6,9 @@ try:
     print("Successfully Connected to SQLite")
 
     cursor.execute("""CREATE TABLE IF NOT EXISTS VEHICLES(
-    NUMBER TEXT PRIMARY KEY,
-   DATE DATE,
-   TIME TIME);
-    """)
+                    NUMBER TEXT PRIMARY KEY,
+                    DATE DATE,
+                    TIME TIME);""")
     conn.commit()
     print("SQLite script executed successfully")
     cursor.close()
