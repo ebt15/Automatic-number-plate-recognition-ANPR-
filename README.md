@@ -24,20 +24,19 @@ The user can view all the Licence Plates stored in the database.
 
 1. Open Anaconda Prompt
 2. Run the code => 
-                   ```
                    
-                   git clone https://github.com/ebt15/Automatic-number-plate-recognition-ANPR-.git
-                   
-                   cd Automatic-number-plate-recognition-ANPR-
-                   
-                   conda create --name plates python=3.8
-                   
-                   conda activate plates
-                   
-                   pip install -r requirements.txt
-                   
-                   ```
+```
+git clone https://github.com/ebt15/Automatic-number-plate-recognition-ANPR-.git
+
+cd Automatic-number-plate-recognition-ANPR-
+
+conda create --name plates python=3.8
+
+conda activate plates
+
+pip install -r requirements.txt
+```
 3. Place the video to run inference on in the same directory and rename it to test.mp4
 4. Run the code => ```
             python main.py
-       
+       ```
