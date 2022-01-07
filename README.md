@@ -19,3 +19,15 @@ If the pattern matches, the License Plate is pushed to an SQLite DataBase.
 The application allows the user to run inference on a video and store the valid plates captured into the DataBase.
 
 The user can view all the Licence Plates stored in the database.
+
+# Instructions to run the app
+
+1. Open Anaconda Prompt
+2. Run the code => git clone 
+                   cd 
+                   conda create --name plates python=3.8
+                   conda activate plates
+                   pip install -r requirements.txt
+3. Place the video to run inference on in the same directory and rename it to test.mp4
+4. Run the code => python main.py
+                   
